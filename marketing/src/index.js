@@ -1,1 +1,2 @@
-console.log('hello');
+// To load async
+import('./bootstrap');
