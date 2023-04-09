@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import App from './App';
 
 // Mount function to start the app
 
 // if Develop mode and isolation
 
 const mount = (el) => {
-  ReactDom.render(<h1>Hello</h1>, el);
+  ReactDom.render(<App />, el);
 };
 
 // run mount immediately
