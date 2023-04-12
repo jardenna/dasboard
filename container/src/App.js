@@ -12,7 +12,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <Header isSignedIn={isSignedIn} />
+        <Header
+          isSignedIn={isSignedIn}
+          onSignOut={() => setIsSignedIn(false)}
+        />
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route path='/auth' component={LazyLoadAuthComponent}>
