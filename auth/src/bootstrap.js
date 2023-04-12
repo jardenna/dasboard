@@ -38,4 +38,4 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // if through container export the mount function, so the container can deside when to mount the function
-export { mount };
+export default mount;

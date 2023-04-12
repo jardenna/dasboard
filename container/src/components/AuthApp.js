@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { mount } from 'auth/AuthApp';
+import mount from 'auth/AuthApp';
 import { useHistory } from 'react-router-dom';
 
 const AuthApp = ({ onSignIn }) => {
