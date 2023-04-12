@@ -7,6 +7,7 @@ const MarketingApp = () => {
   const history = useHistory();
   useEffect(() => {
     const { onParentNavigate } = mount(ref.current, {
+      initialPath: history.location.pathname,
       onNavigate: (
         //We need to  Destructure and rename history.pathname so we can make the check
         { pathname: nextPathname }
