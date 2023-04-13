@@ -15,7 +15,7 @@ const prodConfig = {
       exposes: {
         './AuthApp': './src/bootstrap',
       },
-      shared: packageJson.dependencies,
+      //  shared: packageJson.dependencies,
     }),
   ],
 };

@@ -22,8 +22,8 @@ const devConfig = {
         marketing: 'marketing@http://localhost:8081/remoteEntry.js',
         auth: 'auth@http://localhost:8082/remoteEntry.js',
       },
-      shared: packageJson.dependencies,
-      // shared: ['react', 'react-dom'],
+      // shared: packageJson.dependencies,
+      shared: ['react', 'react-dom'],
     }),
   ],
 };

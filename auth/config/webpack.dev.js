@@ -2,7 +2,6 @@ const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const commonConfig = require('./webpack.common');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
-const packageJson = require('../package.json');
 
 const port = 8082;
 const devConfig = {
@@ -23,8 +22,8 @@ const devConfig = {
       exposes: {
         './AuthApp': './src/bootstrap',
       },
-      shared: packageJson.dependencies,
-      // shared: ['react', 'react-dom'],
+      // shared: packageJson.dependencies,
+      shared: ['react', 'react-dom', 'react-router-dom'],
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',

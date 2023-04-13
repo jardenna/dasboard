@@ -20,7 +20,7 @@ const App = () => {
 
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
-            <Route path='/auth' component={LazyLoadAuthComponent}>
+            <Route path='/auth'>
               <LazyLoadAuthComponent onSignIn={() => setIsSignedIn(true)} />
             </Route>
 
