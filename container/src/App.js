@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useState } from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 // Instead of load all components on every render, we need to only load the component we need with lazy load and React Suspense component
 const LazyLoadAuthComponent = lazy(() => import('./components/AuthApp'));
@@ -16,6 +17,7 @@ const App = () => {
           isSignedIn={isSignedIn}
           onSignOut={() => setIsSignedIn(false)}
         />
+
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route path='/auth' component={LazyLoadAuthComponent}>
@@ -27,6 +29,7 @@ const App = () => {
             </Route>
           </Switch>
         </Suspense>
+        <Footer />
       </div>
     </BrowserRouter>
   );
